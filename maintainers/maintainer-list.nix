@@ -5433,6 +5433,16 @@
     githubId = 6074754;
     name = "Hlodver Sigurdsson";
   };
+  houstdav000 = {
+    name = "David Houston";
+    email = "houstdav000@gmail.com";
+    github = "houstdav000";
+    githubId = 17628961;
+    matrix = "@houstdav000:gh0st.ems.host";
+    keys = [{
+      fingerprint = "73C1 C5DF 51E7 BB92 85E9  A262 5960 278C E235 F821";
+    }];
+  };
   huantian = {
     name = "David Li";
     email = "davidtianli@gmail.com";
