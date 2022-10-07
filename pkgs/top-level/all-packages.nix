@@ -1343,6 +1343,8 @@ with pkgs;
 
   metapixel = callPackage ../tools/graphics/metapixel { };
 
+  inherit (nodePackages) miniflare;
+
   midimonster = callPackage ../tools/audio/midimonster { };
 
   midi-trigger = callPackage ../applications/audio/midi-trigger { };

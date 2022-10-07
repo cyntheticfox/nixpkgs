@@ -310,6 +310,10 @@ final: prev: {
     '';
   });
 
+  miniflare = prev.miniflare.override (oldAttrs: {
+    meta = oldAttrs.meta // { broken = before "16.13"; };
+  });
+
   near-cli = prev.near-cli.override {
     nativeBuildInputs = with pkgs; [
       libusb1
