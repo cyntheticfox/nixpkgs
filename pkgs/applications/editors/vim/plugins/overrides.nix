@@ -221,6 +221,10 @@ self: super: {
     dependencies = with self; [ nvim-cmp tmux ];
   });
 
+  cmp-treesitter = super.cmp-treesitter.overrideAttrs (_: {
+    dependencies = with self; [ nvim-cmp nvim-treesitter ];
+  });
+
   cmp-vim-lsp = super.cmp-vim-lsp.overrideAttrs (old: {
     dependencies = with self; [ nvim-cmp vim-lsp ];
   });
