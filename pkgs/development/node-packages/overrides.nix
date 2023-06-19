@@ -83,6 +83,16 @@ final: prev: {
     meta = oldAttrs.meta // { platforms = lib.platforms.linux; };
   });
 
+  aws-cdk = prev.aws-cdk.override {
+    doCheck = true;
+
+    passthru.tests = {
+      executable-and-init = pkgs.callPackage ./package-tests/aws-cdk.nix;
+
+      inherit (final) aws-cdk;
+    };
+  };
+
   balanceofsatoshis = prev.balanceofsatoshis.override {
     nativeBuildInputs = [ pkgs.installShellFiles ];
     postInstall = ''
